@@ -1,0 +1,8 @@
+{
+    "type": "Onsite",
+    "location": "DC",
+    "page_load_timeout": 30,
+    "page_load_retries": 3,
+    "email": "",
+    "doc_location": "" 
+}
