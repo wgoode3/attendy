@@ -7,7 +7,7 @@ import time
 def download_sheet(driver, settings):
 
     # navigate to the google doc, then wait 5 seconds for it to load
-    driver.get(settings["doc_location"])
+    driver.get(settings["sheet_url"])
     time.sleep(5)
 
     # navigate to the correct sheet based on Month and Year eg. June 2019

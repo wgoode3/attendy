@@ -16,19 +16,19 @@ def read_sheet():
     # find the csv in the downloads folder and read it in 
     downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads")
     ls = os.listdir(downloads_folder)
-    SHEET = None
+    sheet = None
     for file in ls:
         if file.endswith(".csv"):
             file_location = os.path.join(downloads_folder, file)
             with open(file_location) as file:
-                SHEET = file.read()
+                sheet = file.read()
             break
 
     lines = []
-    if SHEET is not None:
+    if sheet is not None:
         # ugly list comprehension to find just the rows of data with students
         # if index 0 is an email, then it is a student entry to check through
-        lines = [line for line in SHEET.splitlines() if EMAIL_CHECK.match(line.split(",")[0])]
+        lines = [line for line in sheet.splitlines() if EMAIL_CHECK.match(line.split(",")[0])]
     
     # try to work out the current day by finding the last column with attendance data
     current_days = []

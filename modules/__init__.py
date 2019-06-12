@@ -1,9 +1,14 @@
-from selenium import webdriver
 from .download_sheet import download_sheet
 from .login_to_google import login_to_google
 from .read_sheet import read_sheet
 from .update_attendance import update_attendance
 import os, json, getpass 
+
+try:
+    from selenium import webdriver
+except ModuleNotFoundError as e:
+    print(e)
+    print("Did you forget to activate the virtual environment")
 
 # Calculates the project path (stolen shamelessly from django settings.py)
 CURRENT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

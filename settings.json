@@ -1,8 +1,9 @@
 {
-    "type": "Onsite",
-    "location": "DC",
+    "driver_type": "Firefox",
     "page_load_timeout": 30,
-    "page_load_retries": 3,
+    "suppress_alerts": true,
+    "type": "Any Programs",
+    "location": "All Locations",
     "email": "",
-    "doc_location": "" 
+    "sheet_url": "" 
 }
