@@ -20,7 +20,7 @@ def download_sheet(driver, settings):
     time.sleep(2)
 
     # hover over the "Download as" element in the dropdown
-    download_as = driver.find_element_by_xpath("//span[@aria-label='Download as d']")
+    download_as = driver.find_element_by_xpath("//span[@aria-label='Download d']")
     ActionChains(driver).move_to_element(download_as).perform()
     time.sleep(2)
 
