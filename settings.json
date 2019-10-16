@@ -1,9 +1,9 @@
 {
     "driver_type": "Firefox",
-    "page_load_timeout": 30,
+    "page_load_timeout": 60,
     "suppress_alerts": true,
     "type": "Any Programs",
     "location": "All Locations",
-    "email": "",
-    "sheet_url": "" 
+    "email": "wgoode@codingdojo.com",
+    "sheet_url": "https://docs.google.com/spreadsheets/d/1sAtsigRbBONrPqXsZ3bLgXENhlP_UJ4DS-ir_AXXqJw/edit?pli=1#gid=1500521866" 
 }

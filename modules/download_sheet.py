@@ -22,7 +22,7 @@ def download_sheet(driver, settings):
     # hover over the "Download as" element in the dropdown
     download_as = driver.find_element_by_xpath("//span[@aria-label='Download d']")
     ActionChains(driver).move_to_element(download_as).perform()
-    time.sleep(2)
+    time.sleep(4)
 
     # click the download as csv link in the second dropdown
     csv_label = "//span[@aria-label='Comma-separated values (.csv, current sheet) c']"
