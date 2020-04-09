@@ -42,6 +42,19 @@ def update_attendance(driver, settings, student_data):
     if settings["suppress_alerts"]:
         driver.execute_script("window.alert = function(){}")
 
+    # clicking these elements in this order should set the dropdowns correctly
+    # really gross, but these items don't have ids or simpler selectors
+    program = "/html/body/div/div[3]/div/div[2]/form/ul[1]/li[1]"
+    all_programs = "/html/body/div/div[3]/div/div[2]/form/ul[1]/li[1]/div/div/ul/li[1]"
+    location = "/html/body/div/div[3]/div/div[2]/form/ul[1]/li[2]"
+    all_locations = "/html/body/div/div[3]/div/div[2]/form/ul[1]/li[2]/div[1]/div/ul/li[1]"
+    dates = "/html/body/div/div[3]/div/div[2]/form/ul[1]/li[5]"
+    all_dates = "/html/body/div/div[3]/div/div[2]/form/ul[1]/li[5]/div/div/ul/li[1]"
+    xpaths = [program, all_programs, location, all_locations, dates, all_dates]
+    for path in xpaths:
+        driver.find_element_by_xpath(path).click()
+        time.sleep(1)
+
     # loop through the student data
     for student in student_data:
 
